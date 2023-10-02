@@ -1,0 +1,7 @@
+require("miraven.plugin_configs.kanagawa")
+require("miraven.plugin_configs.lualine")
+require("miraven.plugin_configs.telescope")
+require("miraven.plugin_configs.treesitter")
+require("miraven.plugin_configs.lsp")
+require("miraven.plugin_configs.gitsigns")
+require("miraven.plugin_configs.dashboard")

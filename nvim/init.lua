@@ -1,0 +1,5 @@
+require("miraven.options")
+require("miraven.keymaps")
+require("miraven.plugins")
+require("miraven.autocmds")
+require("miraven.plugin_configs")
