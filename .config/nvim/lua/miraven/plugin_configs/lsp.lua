@@ -54,3 +54,4 @@ cmp.setup({
   }),
 })
 
+lsp_zero.setup()

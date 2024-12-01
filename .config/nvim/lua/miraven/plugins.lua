@@ -16,6 +16,7 @@ require("lazy").setup({
   "nvim-lualine/lualine.nvim",
   "nvim-treesitter/nvim-treesitter",
   "lewis6991/gitsigns.nvim",
+  "simrat39/rust-tools.nvim",
   {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.3",
@@ -48,7 +49,12 @@ require("lazy").setup({
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
-      {"L3MON4D3/LuaSnip"}
+      {"L3MON4D3/LuaSnip"},
+      {'hrsh7th/cmp-buffer'},
+		  {'hrsh7th/cmp-path'},
+		  {'saadparwaiz1/cmp_luasnip'},
+		  {'hrsh7th/cmp-nvim-lsp'},
+		  {'hrsh7th/cmp-nvim-lua'},
     },
   },
   {
@@ -58,8 +64,14 @@ require("lazy").setup({
     }
   },
   {
-      "windwp/nvim-autopairs",
-      event = "InsertEnter",
-      opts = {} -- this is equalent to setup({}) function
-  }
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    opts = {} -- this is equalent to setup({}) function
+  },
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
+  },
 })
