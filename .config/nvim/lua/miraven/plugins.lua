@@ -74,4 +74,9 @@ require("lazy").setup({
     ft = { "markdown" },
     build = function() vim.fn["mkdp#util#install"]() end,
   },
+  {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" }
+  }
 })

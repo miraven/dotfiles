@@ -1,0 +1,20 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+[git_metrics]
+disabled = false
+format = '(([ $added ]($added_style))([ $deleted ]($deleted_style)))'
+only_nonzero_diffs = true
+added_style = 'green'
+deleted_style = 'red'
+
+[line_break]
+disabled = true
+
+[jobs]
+disabled = true
+
+[battery]
+disabled = true
