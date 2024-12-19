@@ -7,8 +7,8 @@ config.font = wezterm.font("Hack Nerd Font Mono")
 config.font_size = 19
 
 -- blurrr
-config.window_background_opacity = 0.85
-config.macos_window_background_blur = 5
+config.window_background_opacity = 0.8
+config.macos_window_background_blur = 1
 config.initial_rows = 45
 config.initial_cols = 180
 config.window_decorations = "RESIZE"
