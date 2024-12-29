@@ -12,11 +12,36 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  "rebelot/kanagawa.nvim",
   "nvim-lualine/lualine.nvim",
-  "nvim-treesitter/nvim-treesitter",
   "lewis6991/gitsigns.nvim",
   "simrat39/rust-tools.nvim",
+  {
+    "rebelot/kanagawa.nvim",
+    lazy = false,
+    config = function ()
+      require("kanagawa").setup({
+        styles = {
+          sidebars = "transparent",
+          floats = "transparent",
+        },
+      })
+      vim.cmd("colorscheme kanagawa")
+    end
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function ()
+      local configs = require("nvim-treesitter.configs")
+
+      configs.setup({
+          ensure_installed = { "c", "cpp", "python", "rust", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline"},
+          sync_install = false,
+          highlight = { enable = true },
+          indent = { enable = true },
+        })
+    end
+  },
   {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.3",
@@ -78,5 +103,12 @@ require("lazy").setup({
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
     dependencies = { "nvim-lua/plenary.nvim" }
-  }
+  },
+  {
+    'MeanderingProgrammer/render-markdown.nvim',
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+    ---@module 'render-markdown'
+    ---@type render.md.UserConfig
+    opts = {},
+  },
 })
