@@ -11,3 +11,4 @@ vim.api.nvim_set_hl(0, "LineNrAbove", { bg = "none" })
 vim.api.nvim_set_hl(0, "LineNrBelow", { bg = "none" })
 vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
 
+vim.cmd[[colorscheme tokyonight]]

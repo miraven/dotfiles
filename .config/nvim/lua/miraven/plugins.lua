@@ -13,19 +13,63 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   "nvim-lualine/lualine.nvim",
-  "lewis6991/gitsigns.nvim",
   "simrat39/rust-tools.nvim",
   {
-    "rebelot/kanagawa.nvim",
+    "lewis6991/gitsigns.nvim",
+    version = "*",
     lazy = false,
+  },
+  {
+  "tpope/vim-fugitive",
+    version = "*",
+    lazy = false,
+  },
+  -- {
+  --   "rebelot/kanagawa.nvim",
+  --   lazy = false,
+  --   config = function ()
+  --     require("kanagawa").setup({
+  --       styles = {
+  --         sidebars = "transparent",
+  --         floats = "transparent",
+  --       },
+  --     })
+  --     vim.cmd("colorscheme kanagawa")
+  --   end
+  -- },
+  {
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    lazy = false,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+  },
+  {
+    'akinsho/bufferline.nvim',
+    version = "*",
+    dependencies = 'nvim-tree/nvim-web-devicons',
     config = function ()
-      require("kanagawa").setup({
-        styles = {
-          sidebars = "transparent",
-          floats = "transparent",
-        },
-      })
-      vim.cmd("colorscheme kanagawa")
+      vim.opt.termguicolors = true
+      require("bufferline").setup{}
+    end
+  },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      style = "storm",
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      }
+    },
+    config = function(_, opts)
+      local tokyonight = require "tokyonight"
+      tokyonight.setup(opts)
+      tokyonight.load()
     end
   },
   {
