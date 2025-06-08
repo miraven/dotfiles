@@ -7,8 +7,8 @@ config.font = wezterm.font("JetBrains Mono")
 config.font_size = 19
 
 -- blurrr
-config.window_background_opacity = 0.85
-config.macos_window_background_blur = 1
+config.window_background_opacity = 0.95
+-- config.macos_window_background_blur = 1
 config.initial_rows = 45
 config.initial_cols = 180
 config.window_decorations = "RESIZE"
@@ -22,6 +22,8 @@ config.enable_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
 config.show_tab_index_in_tab_bar = false
 config.use_fancy_tab_bar = false
+
+config.audible_bell = "Disabled"
 
 wezterm.on("format-tab-title", function(tab, _, _, _, hover)
     local background = config.colors.brights[1]
