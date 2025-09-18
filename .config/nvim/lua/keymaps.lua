@@ -40,3 +40,7 @@ vim.keymap.set("n", "<C-t>", function() harpoon:list():select(1) end)
 vim.keymap.set("n", "<C-y>", function() harpoon:list():select(2) end)
 vim.keymap.set("n", "<C-g>", function() harpoon:list():select(3) end)
 vim.keymap.set("n", "<C-h>", function() harpoon:list():select(4) end)
+
+-- git signs
+vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { desc = "Git preview hunk" })
+vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", { desc = "Git toggle current line blame" })
