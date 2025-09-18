@@ -1,6 +1,3 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 -- line numbers
 vim.wo.number = true
 vim.wo.relativenumber = true
@@ -19,3 +16,6 @@ vim.opt.smartindent = true
 vim.opt.autoindent = true
 vim.opt.colorcolumn="100"
 
+vim.o.breakindent = true
+
+vim.o.winborder = 'rounded'

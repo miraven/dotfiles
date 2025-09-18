@@ -1,6 +1,16 @@
-require('gitsigns').setup()
+vim.cmd('highlight TelescopeBorder guibg=none')
+vim.cmd('highlight TelescopeTitle guibg=none')
 
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
+-- lines
+vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
+vim.api.nvim_set_hl(0, "LineNrAbove", { bg = "none" })
+vim.api.nvim_set_hl(0, "LineNrBelow", { bg = "none" })
+vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" })
+
+-- git signs
 vim.api.nvim_set_hl(0, "GitGutterAdd", { bg = "none" })
 vim.api.nvim_set_hl(0, "GitGutterDelete", { bg = "none" })
 vim.api.nvim_set_hl(0, "GitGutterChangeDelete", { bg = "none" })
