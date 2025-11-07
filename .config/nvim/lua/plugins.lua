@@ -1,7 +1,7 @@
 return {
     "NMAC427/guess-indent.nvim",
     -- NOTE: CONFIGURE COLORS HERE
-    { import = 'colors.tokyonight' },
+    { import = 'colors.rosepine' },
     { import = 'goodlooks' },
     {
         "folke/todo-comments.nvim",
