@@ -44,3 +44,6 @@ vim.keymap.set("n", "<C-h>", function() harpoon:list():select(4) end)
 -- git signs
 vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { desc = "Git preview hunk" })
 vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", { desc = "Git toggle current line blame" })
+
+-- did you oil it down? (o_O)
+vim.keymap.set("n", "<leader>ex", "<CMD>Oil<CR>", { desc = "Oil file explorer" })
