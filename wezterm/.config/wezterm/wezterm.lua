@@ -7,15 +7,19 @@ config.font = wezterm.font("JetBrains Mono")
 config.font_size = 19
 
 -- blurrr
-config.window_background_opacity = 0.8
+config.window_background_opacity = 0.87
 config.macos_window_background_blur = 1
 config.initial_rows = 45
 config.initial_cols = 180
 config.window_decorations = "RESIZE"
 
 -- colors
--- config.color_scheme = "kanagawabones"
-config.color_scheme = "Tokyo Night"
+-- config.color_scheme = "Kanagawa (Gogh)"
+-- config.color_scheme = "Tokyo Night"
+config.color_scheme = 'Gruvbox Dark (Gogh)'
+-- config.color_scheme = 'Everforest Dark (Gogh)'
+-- config.color_scheme = 'rose-pine'
+
 
 -- tab
 config.enable_tab_bar = true
