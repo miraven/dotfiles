@@ -185,14 +185,18 @@ bar {
         status_command i3status
 }
 
-# mapping CAPS as another CTRL
-exec_always --no-startup-id /usr/bin/setxkbmap -option "caps:ctrl_modifier"
+# map left command/super key to control
+# exec_always --no-startup-id xmodmap ~/.Xmodmap
+exec_always --no-startup-id setxkbmap -option altwin:ctrl_win
 
 # Set the desktop wallpaper
-exec_always --no-startup-id feh --bg-fill ~/Downloads/dandadan-anime-tv-series-qz.jpg
+exec_always --no-startup-id feh --bg-fill ~/Downloads/wallhaven-ghost.png
 
 # transparency i think ..
 exec_always --no-startup-id picom -b
 
 # less delay on delete keypress
-exec --no-startup-id xset r rate 200 35
+exec_always --no-startup-id xset r rate 200 40
+
+# startup from suspend fix
+exec_always --no-startup-id sh -c '~/.local/bin/restore-hdmi-on-resume >> ~/.local/state/restore-hdmi.log 2>&1'
