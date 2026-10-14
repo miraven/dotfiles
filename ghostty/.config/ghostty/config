@@ -49,6 +49,6 @@
 # resize-overlay-duration = 4s 200ms
 
 theme = Rose Pine
-background-opacity = 0.8
+background-opacity = 0.95
 font-size = 18
 gtk-titlebar = false
