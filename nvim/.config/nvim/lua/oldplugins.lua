@@ -1,7 +1,7 @@
 return {
     "NMAC427/guess-indent.nvim",
     -- NOTE: CONFIGURE COLORS HERE
-    { import = 'colors.gruvbox' },
+    { import = 'colors.rosepine' },
     { import = 'goodlooks' },
     {
         "folke/todo-comments.nvim",
@@ -122,33 +122,12 @@ return {
         end
     },
     {
-        "nvim-treesitter/nvim-treesitter",
-        branch = "master",
-        lazy = false,
-        build = ":TSUpdate",
-        config = function()
-            local configs = require("nvim-treesitter.configs")
-
-            configs.setup({
-                ensure_installed = { "bash", "diff", "html", "c", "cpp", "python", "rust", "go", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
-                auto_install = true,
-                sync_install = false,
-                highlight = { enable = true },
-                indent = { enable = true },
-            })
-        end
-    },
-    {
-        "nvim-treesitter/nvim-treesitter-context",
-        dependencies = { "nvim-treesitter/nvim-treesitter" },
-        config = function()
-            require("treesitter-context").setup()
-        end
-    },
-    {
-        "nvim-telescope/telescope.nvim",
-        tag = "0.1.3",
-        dependencies = { "nvim-lua/plenary.nvim" }
+        'nvim-telescope/telescope.nvim', version = '*',
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            -- optional but recommended
+            { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+        }
     },
     {
         'saghen/blink.cmp',
