@@ -190,7 +190,7 @@ bar {
 exec_always --no-startup-id setxkbmap -option altwin:ctrl_win
 
 # Set the desktop wallpaper
-exec_always --no-startup-id feh --bg-fill ~/Downloads/wallhaven-ghost.png
+exec_always --no-startup-id feh --bg-fill ~/wallpaperz/peak_one_piece.png
 
 # transparency i think ..
 exec_always --no-startup-id picom -b
